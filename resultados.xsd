@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="resultados">
+                <!-- Definición del elemento consulta1_1 -->
+        <xs:element name="consulta1_1">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta1_2 -->
+        <xs:element name="consulta1_2">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta2 -->
+        <xs:element name="consulta2">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <!-- Definición del elemento consulta3_1 -->
+        <xs:element name="consulta3_1">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta3_2 -->
+        <xs:element name="consulta3_2">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta4_1 -->
+        <xs:element name="consulta4_1">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+         <!-- Definición del elemento consulta4_2 -->
+        <xs:element name="consulta4_2">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta5_1 -->
+        <xs:element name="consulta5_1">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta5_2 -->
+        <xs:element name="consulta5_2">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <!-- Definición del elemento consulta6 -->
+        <xs:element name="consulta6">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta7 -->
+        <xs:element name="consulta7">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+         <!-- Definición del elemento consulta8 -->
+        <xs:element name="consulta8">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta9-->
+        <xs:element name="consulta9">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+
+        <!-- Definición del elemento consulta10_1 -->
+        <xs:element name="consulta10_1">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <!-- Definición del elemento consulta10_2 -->
+        <xs:element name="consulta10_2">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="descripcion" type="xs:string"/>
+                    <xs:element name="codigo_xquery" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="consulta1_1" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta1_2" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta2" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta3_1" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta3_2" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta4_1" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta4_2" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta5_1" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta5_2" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta6" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta7" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta8" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta9" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta10_1" minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="consulta10_2" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,21 @@
+<!ELEMENT resultados (consulta*)>
+<!ELEMENT consulta (descripcion, codigo_xquery)>
+
+<!ELEMENT consulta1_1 (descripcion, codigo_xquery)>
+<!ELEMENT consulta1_2 (descripcion, codigo_xquery)>
+<!ELEMENT consulta2 (descripcion, codigo_xquery)>
+<!ELEMENT consulta3_1 (descripcion, codigo_xquery)>
+<!ELEMENT consulta3_2 (descripcion, codigo_xquery)>
+<!ELEMENT consulta4_1 (descripcion, codigo_xquery)>
+<!ELEMENT consulta4_2 (descripcion, codigo_xquery)>
+<!ELEMENT consulta5_1 (descripcion, codigo_xquery)>
+<!ELEMENT consulta5_2 (descripcion, codigo_xquery)>
+<!ELEMENT consulta6 (descripcion, codigo_xquery)>
+<!ELEMENT consulta7 (descripcion, codigo_xquery)>
+<!ELEMENT consulta8 (descripcion, codigo_xquery)>
+<!ELEMENT consulta9 (descripcion, codigo_xquery)>
+<!ELEMENT consulta10_1 (descripcion, codigo_xquery)>
+<!ELEMENT consulta10_2 (descripcion, codigo_xquery)>
+
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT codigo_xquery (#PCDATA)>

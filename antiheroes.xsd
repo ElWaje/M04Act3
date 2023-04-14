@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición del elemento antiheroes -->
+  <xs:element name="antiheroes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="antiheroe" minOccurs= "3" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definición del elemento antihéroe -->
+  <xs:element name="antiheroe">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="10"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="codigo" type="codigoType"/>
+        <xs:element name="foto" type="fotoType"/>
+        <xs:element name="sexo" type="sexoType"/>
+        <xs:element name="poder" type="poderType"/>
+        <xs:element name="fuerza" type="xs:integer"/>
+        <xs:element name="comentario">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="50"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definición del tipo de datos para el código -->
+  <xs:simpleType name="codigoType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="AH-\d{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definición del tipo de datos para la foto -->
+  <xs:simpleType name="fotoType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="img/.*\.jpg"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definición del tipo de datos para el sexo -->
+  <xs:simpleType name="sexoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="H"/>
+      <xs:enumeration value="M"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definición del tipo de datos para el poder -->
+  <xs:simpleType name="poderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Volar"/>
+      <xs:enumeration value="Invisibilidad"/>
+      <xs:enumeration value="Agilidad"/>
+      <xs:enumeration value="Regeneración"/>
+      <xs:enumeration value="Transformación"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

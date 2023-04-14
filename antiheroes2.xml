@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="antiheroes2.xsl"?>
+<!DOCTYPE antiheroes SYSTEM "antiheroes2.dtd">
+<antiheroes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="antiheroes2.xsd">
+  <antiheroe id="AH-0001">
+    <nombre>Dr Strange</nombre>
+    <codigo>AH-0001</codigo>
+    <foto>img/DoctorStrange.jpg</foto>
+    <sexo>H</sexo>
+    <poder>Transformación</poder>
+    <fuerza>7</fuerza>
+    <comentario>Maestro de las artes místicas</comentario>
+    <historia>Dr. Stephen Strange era un neurocirujano de renombre mundial, conocido por su habilidad y precisión en el quirófano. Su vida cambió drásticamente después de un trágico accidente automovilístico que le causó daños irreparables en las manos, lo que le impidió seguir ejerciendo la cirugía.
+
+Desesperado por recuperar sus habilidades y desilusionado por los tratamientos médicos convencionales, Strange viajó al místico Tíbet en busca de curación. Allí conoció al Anciano, un maestro en las artes místicas, quien reveló a Strange la existencia de dimensiones mágicas y energías ocultas.
+
+El Anciano entrenó a Strange en las artes místicas y lo instruyó en el uso de poderes mágicos para proteger la Tierra de amenazas sobrenaturales y extradimensionales. A medida que Strange dominaba sus nuevas habilidades, adoptó la identidad de Dr. Strange, el Hechicero Supremo.
+
+Como Hechicero Supremo, Dr. Strange ha enfrentado a numerosos enemigos y ha salvado al mundo en incontables ocasiones. Aunque sigue luchando contra el mal, Strange también trabaja para mantener el equilibrio entre las fuerzas místicas y la realidad que todos conocemos, convirtiéndose en un protector fundamental para nuestro mundo.</historia>
+  </antiheroe>
+  <antiheroe id="AH-0002">
+    <nombre>Gata Negra</nombre>
+    <codigo>AH-0002</codigo>
+    <foto>img/GataNegra.jpg</foto>
+    <sexo>M</sexo>
+    <poder>Agilidad</poder>
+    <fuerza>5</fuerza>
+    <comentario>Experta en artes marciales y ladrona elegante</comentario>
+    <historia>Felicia Hardy, hija de un ladrón de guante blanco llamado Walter Hardy, creció en una vida de privilegios y riqueza. Desde pequeña, Felicia mostró una habilidad innata para la gimnasia, y su padre la animó a seguir sus pasiones y desarrollar sus talentos. A medida que Felicia crecía, también creció su interés en los secretos de su padre y en su vida oculta como un ladrón maestro.
+
+Un día, un trágico evento sacudió la vida de Felicia: su padre fue arrestado y encarcelado por sus crímenes. Este evento fue un punto de inflexión para Felicia, quien decidió seguir los pasos de su padre y convertirse en una ladrona de guante blanco con la identidad de Gata Negra.
+
+Inicialmente, Felicia adoptó su alter ego para liberar a su padre de prisión, pero rápidamente se enamoró de la adrenalina y la emoción que le proporcionaba su vida criminal. Con el tiempo, Gata Negra comenzó a cruzarse con otros personajes del mundo del crimen y de los superhéroes, incluido Spider-Man, con quien desarrolló una complicada relación amorosa.
+
+Aunque Gata Negra comenzó como una ladrona, su camino la llevó a convertirse en una heroína en sus propios términos, luchando contra el crimen y protegiendo a los inocentes. A lo largo de su carrera, Felicia ha forjado alianzas y enemistades con otros héroes y villanos, siempre manteniendo su independencia y su astucia felina.</historia>
+  </antiheroe>
+  <antiheroe id="AH-0003">
+    <nombre>La Sombra</nombre>
+    <codigo>AH-0003</codigo>
+    <foto>img/LaSombra.jpg</foto>
+    <sexo>H</sexo>
+    <poder>Invisibilidad</poder>
+    <fuerza>6</fuerza>
+    <comentario>Maestro del sigilo y la infiltración</comentario>
+    <historia>En una época de corrupción y crimen desenfrenado en la ciudad, un misterioso vigilante surge de las sombras para restaurar la justicia y proteger a los inocentes. Este enigmático personaje es conocido solo como La Sombra.
+
+La Sombra era originalmente un hombre llamado Kent Allard, un piloto y espía altamente capacitado que, después de años de servicio, decidió retirarse y desaparecer de la vida pública. Sin embargo, su sentido de la justicia lo llevó a adoptar la identidad secreta de La Sombra, utilizando sus habilidades y conocimientos para combatir el crimen y la corrupción en la ciudad.
+
+Vistiendo un largo abrigo negro, una bufanda roja y un sombrero de ala ancha, La Sombra se convierte en una figura temible que acecha las calles por la noche, desapareciendo en la oscuridad tan rápidamente como aparece. Sus enemigos temen su habilidad para ocultarse en las sombras y su inquietante risa que resuena en la noche.
+
+A lo largo de su carrera como vigilante, La Sombra ha desarrollado un grupo de aliados, conocidos como sus agentes, que lo ayudan en su lucha contra el crimen. Juntos, enfrentan a criminales, mafiosos y villanos sobrenaturales que amenazan la seguridad de la ciudad y sus habitantes.
+
+La Sombra se ha convertido en un símbolo de esperanza y justicia en un mundo oscuro y corrupto, recordándonos a todos que la luz siempre prevalecerá sobre la oscuridad.</historia>
+  </antiheroe>
+  <antiheroe id="AH-0004">
+    <nombre>Ravena</nombre>
+    <codigo>AH-0004</codigo>
+    <foto>img/Ravena.jpg</foto>
+    <sexo>M</sexo>
+    <poder>Volar</poder>
+    <fuerza>6</fuerza>
+    <comentario>Telepática y experta en artes oscuras</comentario>
+    <historia>Ravena, cuyo nombre real es Rachel Roth, es una joven y poderosa hechicera que ha enfrentado una vida llena de desafíos y oscuridad. Hija del demonio interdimensional Trigon y de una mujer humana llamada Angela Roth, Ravena ha heredado habilidades místicas y oscuras que la hacen única entre sus compañeros superhéroes.
+
+Creciendo en la dimensión pacífica de Azarath, Ravena fue educada por monjes en el control de sus emociones y en el arte de la magia. Sin embargo, su vida dio un giro drástico cuando su malvado padre, Trigon, buscó utilizarla como un portal para conquistar la Tierra y esclavizar a la humanidad.
+
+Desesperada por detener los planes de su padre, Ravena huyó a la Tierra, donde se unió a un grupo de jóvenes superhéroes conocidos como los Jóvenes Titanes. Juntos, lucharon en numerosas batallas para proteger el mundo de las amenazas sobrenaturales y evitar la invasión de Trigon.
+
+A lo largo de su tiempo con los Jóvenes Titanes, Ravena ha enfrentado la difícil tarea de encontrar el equilibrio entre sus poderes oscuros y su deseo de hacer el bien. A pesar de su naturaleza reservada y misteriosa, ha logrado forjar amistades profundas y duraderas con sus compañeros de equipo, quienes la han ayudado a superar sus miedos y a aceptar su herencia como algo que no define su verdadero ser.
+
+En su lucha por proteger a sus seres queridos y mantener a raya la oscuridad, Ravena se ha convertido en una figura emblemática de valentía y fortaleza, demostrando que incluso aquellos nacidos en la oscuridad pueden encontrar la luz y utilizarla para hacer el bien en el mundo.</historia>
+  </antiheroe>
+  <antiheroe id="AH-0005">
+    <nombre>Arlequina</nombre>
+    <codigo>AH-0005</codigo>
+    <foto>img/Arlequina.jpg</foto>
+    <sexo>M</sexo>
+    <poder>Agilidad</poder>
+    <fuerza>3</fuerza>
+    <comentario>Antigua psiquiatra del Joker, ahora villana</comentario>
+    <historia>Arlequina, cuyo nombre real es Harleen Quinzel, comenzó su vida como una joven y prometedora psiquiatra en el Asilo Arkham de Ciudad Gótica. Su vida dio un giro inesperado cuando se encontró con el infame Joker, el enemigo jurado de Batman.
+
+Durante las sesiones de terapia con el Joker, Harleen quedó cautivada por su carisma y retorcida perspectiva del mundo. Poco a poco, el Joker manipuló sus emociones y la llevó a enamorarse de él, convirtiéndola en su leal compañera y cómplice en sus crímenes.
+
+Adoptando el alter ego de Arlequina, Harleen dejó su carrera en la psiquiatría y se unió al Joker en una serie de caóticas aventuras criminales por Ciudad Gótica, enfrentándose a Batman y a otros héroes en numerosas ocasiones. A pesar de su amor obsesivo por el Joker, Arlequina siempre fue maltratada y subestimada por él.
+
+Con el tiempo, Arlequina comenzó a darse cuenta de que merecía algo mejor que su relación tóxica con el Joker. Decidió separarse de él y comenzó a forjar su propio camino como antihéroe y ocasionalmente como villana. Arlequina se unió a otros personajes de Ciudad Gótica, como la Cazadora y Hiedra Venenosa, formando alianzas y amistades que la ayudaron a crecer y encontrar su lugar en el mundo.
+
+A lo largo de su tumultuosa vida, Arlequina ha demostrado ser una superviviente astuta y resiliente. A pesar de sus orígenes trágicos y su caótica vida amorosa, continúa reinventándose y luchando por su independencia, demostrando que incluso los personajes más complicados pueden encontrar la redención y el camino hacia un futuro mejor.</historia>
+  </antiheroe>
+  <antiheroe id="AH-0006">
+    <nombre>Deadpool</nombre>
+    <codigo>AH-0006</codigo>
+    <foto>img/Deadpool.jpg</foto>
+    <sexo>H</sexo>
+    <poder>Regeneración</poder>
+    <fuerza>7</fuerza>
+    <comentario>Antihéroe bocazas y desquiciado</comentario>
+    <historia>Deadpool, también conocido como Wade Wilson, comenzó su vida como un mercenario canadiense con habilidades de combate excepcionales y una moral un tanto dudosa. Sin embargo, su vida dio un giro oscuro cuando fue diagnosticado con cáncer terminal en etapa avanzada. Desesperado por encontrar una cura, Wade aceptó someterse a un experimento secreto del gobierno en un intento por salvar su vida.
+
+El experimento buscaba otorgarle habilidades sobrehumanas y un factor de curación similar al de Wolverine, otro miembro del universo de los X-Men. Si bien el experimento tuvo éxito y le dio a Wade un increíble poder regenerativo que detuvo el cáncer, también desfiguró su cuerpo y dejó su mente inestable y propensa a alucinaciones.
+
+Con su nuevo factor de curación y habilidades mejoradas, Wade adoptó la identidad de Deadpool y comenzó a trabajar como un mercenario y antihéroe, llevando a cabo misiones para quien estuviera dispuesto a pagar el precio correcto. Sin embargo, a pesar de su falta de escrúpulos, Deadpool también mostró un lado más suave y vulnerable, especialmente en su relación con su amada Vanessa.
+
+Lo que hace que Deadpool sea único en el mundo de los cómics es su capacidad para romper la cuarta pared y hablar directamente con el lector, burlándose de los clichés del género y comentando su propia historia. Su humor negro, sarcástico y a menudo vulgar, junto con su habilidad para enfrentarse a situaciones absurdas y violentas, lo convierte en un personaje icónico y querido por los fanáticos.
+
+A lo largo de sus aventuras, Deadpool ha luchado junto a héroes como los X-Men, los Vengadores y Spider-Man, aunque su enfoque poco ortodoxo y su humor a menudo lo mantienen al margen de los héroes más tradicionales. Sin embargo, su lucha por la redención y su naturaleza impredecible lo convierten en un personaje complejo y fascinante en el mundo de los cómics y más allá.</historia>
+  </antiheroe>
+</antiheroes>
