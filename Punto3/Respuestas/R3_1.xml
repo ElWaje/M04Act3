@@ -1,0 +1,65 @@
+<antiheroes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="antiheroes.xsd">
+  <antiheroe id="AH-0001">
+    <nombre>Dr Strange</nombre>
+    <codigo>AH-0001</codigo>
+    <foto>img/DoctorStrange.jpg</foto>
+    <sexo>H</sexo>
+    <poder>Transformación</poder>
+    <fuerza>7</fuerza>
+    <comentario>Maestro de las artes místicas</comentario>
+  </antiheroe>
+  <antiheroe id="AH-0002">
+    <nombre>Gata Negra</nombre>
+    <codigo>AH-0002</codigo>
+    <foto>img/GataNegra.jpg</foto>
+    <sexo>M</sexo>
+    <poder>Agilidad</poder>
+    <fuerza>5</fuerza>
+    <comentario>Experta en artes marciales y ladrona elegante</comentario>
+  </antiheroe>
+  <antiheroe id="AH-0003">
+    <nombre>La Sombra</nombre>
+    <codigo>AH-0003</codigo>
+    <foto>img/LaSombra.jpg</foto>
+    <sexo>H</sexo>
+    <poder>Invisibilidad</poder>
+    <fuerza>6</fuerza>
+    <comentario>Maestro del sigilo y la infiltración</comentario>
+  </antiheroe>
+  <antiheroe id="AH-0004">
+    <nombre>Ravena</nombre>
+    <codigo>AH-0004</codigo>
+    <foto>img/Ravena.jpg</foto>
+    <sexo>M</sexo>
+    <poder>Volar</poder>
+    <fuerza>6</fuerza>
+    <comentario>Telepática y experta en artes oscuras</comentario>
+  </antiheroe>
+  <antiheroe id="AH-0005">
+    <nombre>Arlequina</nombre>
+    <codigo>AH-0005</codigo>
+    <foto>img/Arlequina.jpg</foto>
+    <sexo>M</sexo>
+    <poder>Agilidad</poder>
+    <fuerza>3</fuerza>
+    <comentario>Antigua psiquiatra del Joker, ahora villana</comentario>
+  </antiheroe>
+  <antiheroe id="AH-0006">
+    <nombre>Deadpool</nombre>
+    <codigo>AH-0006</codigo>
+    <foto>img/Deadpool.jpg</foto>
+    <sexo>H</sexo>
+    <poder>Regeneración</poder>
+    <fuerza>7</fuerza>
+    <comentario>Antihéroe bocazas y desquiciado</comentario>
+  </antiheroe>
+<antiheroe id="AH-0007">
+    <nombre>InvisiGuy</nombre>
+    <codigo>AH-0007</codigo>
+    <foto>img/InvisiGuy.jpg</foto>
+    <sexo>H</sexo>
+    <poder>Invisibilidad</poder>
+    <fuerza>8</fuerza>
+    <comentario>Experto en ocultarse a plena vista</comentario>
+  </antiheroe>
+</antiheroes>

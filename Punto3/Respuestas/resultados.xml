@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="resultados.xsl"?>
+<!DOCTYPE antiheroes SYSTEM "resultados.dtd">
+<resultados xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="resultados.xsd">
+    <consulta1_1>
+        <descripcion>Consulta 1_1: Muestra todos los antihéroes que tienen una fuerza mayor a la media. muéstralo con XPATH</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes/antiheroe
+                        let $avg_fuerza := avg($antiheroes/fuerza)
+                        return $antiheroes[fuerza > $avg_fuerza]
+        </codigo_xquery>
+        <antiheroe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AH-0001">
+            <nombre>Dr Strange</nombre>
+            <codigo>AH-0001</codigo>
+            <foto>img/DoctorStrange.jpg</foto>
+            <sexo>H</sexo>
+            <poder>Transformación</poder>
+            <fuerza>7</fuerza>
+            <comentario>Maestro de las artes místicas</comentario>
+        </antiheroe>
+        <antiheroe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AH-0003">
+            <nombre>La Sombra</nombre>
+            <codigo>AH-0003</codigo>
+            <foto>img/LaSombra.jpg</foto>
+            <sexo>H</sexo>
+            <poder>Invisibilidad</poder>
+            <fuerza>6</fuerza>
+            <comentario>Maestro del sigilo y la infiltración</comentario>
+        </antiheroe>
+        <antiheroe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AH-0004">
+            <nombre>Ravena</nombre>
+            <codigo>AH-0004</codigo>
+            <foto>img/Ravena.jpg</foto>
+            <sexo>M</sexo>
+            <poder>Volar</poder>
+            <fuerza>6</fuerza>
+            <comentario>Telepática y experta en artes oscuras</comentario>
+        </antiheroe>
+        <antiheroe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AH-0006">
+            <nombre>Deadpool</nombre>
+            <codigo>AH-0006</codigo>
+            <foto>img/Deadpool.jpg</foto>
+            <sexo>H</sexo>
+            <poder>Regeneración</poder>
+            <fuerza>7</fuerza>
+            <comentario>Antihéroe bocazas y desquiciado</comentario>
+        </antiheroe>
+    </consulta1_1>
+    <consulta1_2>
+        <descripcion>Consulta 1_2: Muestra todos los antihéroes que tienen una fuerza mayor a la media. muéstralo con FLWOR</descripcion>
+        <codigo_xquery>El código XQuery es:
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes/antiheroe
+                        let $avg_fuerza := avg($antiheroes/fuerza)
+                        for $antiheroe in $antiheroes where $antiheroe/fuerza > $avg_fuerza
+                        return $antiheroe
+        </codigo_xquery>
+        <antiheroe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AH-0001">
+            <nombre>Dr Strange</nombre>
+            <codigo>AH-0001</codigo>
+            <foto>img/DoctorStrange.jpg</foto>
+            <sexo>H</sexo>
+            <poder>Transformación</poder>
+            <fuerza>7</fuerza>
+            <comentario>Maestro de las artes místicas</comentario>
+        </antiheroe>
+        <antiheroe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AH-0003">
+            <nombre>La Sombra</nombre>
+            <codigo>AH-0003</codigo>
+            <foto>img/LaSombra.jpg</foto>
+            <sexo>H</sexo>
+            <poder>Invisibilidad</poder>
+            <fuerza>6</fuerza>
+            <comentario>Maestro del sigilo y la infiltración</comentario>
+        </antiheroe>
+        <antiheroe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AH-0004">
+            <nombre>Ravena</nombre>
+            <codigo>AH-0004</codigo>
+            <foto>img/Ravena.jpg</foto>
+            <sexo>M</sexo>
+            <poder>Volar</poder>
+            <fuerza>6</fuerza>
+            <comentario>Telepática y experta en artes oscuras</comentario>
+        </antiheroe>
+        <antiheroe xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AH-0006">
+            <nombre>Deadpool</nombre>
+            <codigo>AH-0006</codigo>
+            <foto>img/Deadpool.jpg</foto>
+            <sexo>H</sexo>
+            <poder>Regeneración</poder>
+            <fuerza>7</fuerza>
+            <comentario>Antihéroe bocazas y desquiciado</comentario>
+        </antiheroe>
+    </consulta1_2>
+    <consulta2>
+        <descripcion>Consulta 2: Muestra los antihéroes clasificados por Poder en una tabla HTML, mostrando el nombre, el poder y la fuerza.</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes/antiheroe
+                        for $antiheroe in $antiheroes order by $antiheroe/poder
+                        return
+                        <tr>
+                            <td>{$antiheroe/nombre/text()}</td>
+                            <td>{$antiheroe/poder/text()}</td>
+                            <td>{$antiheroe/fuerza/text()}</td>
+                        </tr>
+        </codigo_xquery>
+        <tr><td>Gata Negra</td><td>Agilidad</td><td>5</td></tr>
+        <tr><td>Arlequina</td><td>Agilidad</td><td>3</td></tr>
+        <tr><td>La Sombra</td><td>Invisibilidad</td><td>6</td></tr>
+        <tr><td>Deadpool</td><td>Regeneración</td><td>7</td></tr>
+        <tr><td>Dr Strange</td><td>Transformación</td><td>7</td></tr>
+        <tr><td>Ravena</td><td>Volar</td><td>6</td></tr>
+    </consulta2>
+    <consulta3_1>
+        <descripcion>Consulta 3_1: Realizar una inserción de un nuevo antihéroe, en memoria</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        xquery version "3.0";
+                        declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+                        declare option output:method "xml";
+                        declare option output:indent "yes";
+
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes
+                        return
+                        copy $modified := $antiheroes
+                        modify
+                            insert node
+                            <antiheroe id="AH-0007">
+                                <nombre>InvisiGuy</nombre>
+                                <codigo>AH-0007</codigo>
+                                <foto>img/InvisiGuy.jpg</foto>
+                                <sexo>H</sexo>
+                                <poder>Invisibilidad</poder>
+                                <fuerza>8</fuerza>
+                                <comentario>Experto en ocultarse a plena vista</comentario>
+                            </antiheroe>
+                            into $modified
+                        return $modified
+        </codigo_xquery>
+        <antiheroes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="antiheroes.xsd">
+            <antiheroe id="AH-0001">
+                <nombre>Dr Strange</nombre>
+                <codigo>AH-0001</codigo>
+                <foto>img/DoctorStrange.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Transformación</poder>
+                <fuerza>7</fuerza>
+                <comentario>Maestro de las artes místicas</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0002">
+                <nombre>Gata Negra</nombre>
+                <codigo>AH-0002</codigo>
+                <foto>img/GataNegra.jpg</foto>
+                <sexo>M</sexo>
+                <poder>Agilidad</poder>
+                <fuerza>5</fuerza>
+                <comentario>Experta en artes marciales y ladrona elegante</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0003">
+                <nombre>La Sombra</nombre>
+                <codigo>AH-0003</codigo>
+                <foto>img/LaSombra.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Invisibilidad</poder>
+                <fuerza>6</fuerza>
+                <comentario>Maestro del sigilo y la infiltración</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0004">
+                <nombre>Ravena</nombre>
+                <codigo>AH-0004</codigo>
+                <foto>img/Ravena.jpg</foto>
+                <sexo>M</sexo>
+                <poder>Volar</poder>
+                <fuerza>6</fuerza>
+                <comentario>Telepática y experta en artes oscuras</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0005">
+                <nombre>Arlequina</nombre>
+                <codigo>AH-0005</codigo>
+                <foto>img/Arlequina.jpg</foto>
+                <sexo>M</sexo>
+                <poder>Agilidad</poder>
+                <fuerza>3</fuerza>
+                <comentario>Antigua psiquiatra del Joker, ahora villana</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0006">
+                <nombre>Deadpool</nombre>
+                <codigo>AH-0006</codigo>
+                <foto>img/Deadpool.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Regeneración</poder>
+                <fuerza>7</fuerza>
+                <comentario>Antihéroe bocazas y desquiciado</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0007">
+                <nombre>InvisiGuy</nombre>
+                <codigo>AH-0007</codigo>
+                <foto>img/InvisiGuy.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Invisibilidad</poder>
+                <fuerza>8</fuerza>
+                <comentario>Experto en ocultarse a plena vista</comentario>
+            </antiheroe>
+        </antiheroes>
+    </consulta3_1>
+    <consulta3_2>
+        <descripcion>Consulta 3_2: Realizar una inserción de un nuevo antihéroe, en archivo</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        xquery version "3.0";
+                        import module namespace file = "http://expath.org/ns/file";
+
+                        declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization"; declare option output:method "xml";
+                        declare option output:indent "yes";
+                        let $output-path := "antiheroes.xml"
+
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes
+
+                        let $modificado :=
+                        copy $updated := $antiheroes modify (
+                        insert node
+                        <antiheroe id="AH-0007">
+                        <nombre>InvisiGuy</nombre>
+                        <codigo>AH-0007</codigo>
+                        <foto>img/InvisiGuy.jpg</foto>
+                        <sexo>H</sexo>
+                        <poder>Invisibilidad</poder>
+                        <fuerza>8</fuerza>
+                        <comentario>Experto en ocultarse a plena vista</comentario>
+                        </antiheroe> into $updated
+                        )
+                        return $updated return (
+                        file:write($output-path, $modificado, map { "encoding": "UTF-8" }),
+                        <result>Documento XML guardado en {$output-path}</result>
+                        )
+        </codigo_xquery>
+        <result>Documento XML guardado en antiheroes.xml</result>
+    </consulta3_2>
+    <consulta4_1>
+        <descripcion>Consulta 4_1: Modifica la fuerza de todos incrementándola en un 10%, en memoria</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        xquery version "3.0";
+
+                        let $doc := doc("antiheroes.xml")
+                        let $antiheroes := $doc/antiheroes/antiheroe
+                        return
+                        <antiheroes>
+                        {
+                        for $antiheroe in $antiheroes
+                        let $nuevaFuerza := $antiheroe/fuerza * 1.1
+                        return
+                            <antiheroe>
+                            {
+                            $antiheroe/* except $antiheroe/fuerza,
+                            <fuerza>{ $nuevaFuerza }</fuerza>
+                            }
+                            </antiheroe>
+                        }
+                        </antiheroes>
+        </codigo_xquery>
+        <antiheroes><antiheroe><nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Dr Strange</nombre><codigo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">AH-0001</codigo><foto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">img/DoctorStrange.jpg</foto><sexo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">H</sexo><poder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Transformación</poder><comentario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Maestro de las artes místicas</comentario><fuerza>7.700000000000001</fuerza></antiheroe><antiheroe><nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Gata Negra</nombre><codigo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">AH-0002</codigo><foto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">img/GataNegra.jpg</foto><sexo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">M</sexo><poder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Agilidad</poder><comentario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Experta en artes marciales y ladrona elegante</comentario><fuerza>5.5</fuerza></antiheroe><antiheroe><nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">La Sombra</nombre><codigo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">AH-0003</codigo><foto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">img/LaSombra.jpg</foto><sexo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">H</sexo><poder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Invisibilidad</poder><comentario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Maestro del sigilo y la infiltración</comentario><fuerza>6.6000000000000005</fuerza></antiheroe><antiheroe><nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Ravena</nombre><codigo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">AH-0004</codigo><foto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">img/Ravena.jpg</foto><sexo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">M</sexo><poder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Volar</poder><comentario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Telepática y experta en artes oscuras</comentario><fuerza>6.6000000000000005</fuerza></antiheroe><antiheroe><nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Arlequina</nombre><codigo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">AH-0005</codigo><foto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">img/Arlequina.jpg</foto><sexo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">M</sexo><poder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Agilidad</poder><comentario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Antigua psiquiatra del Joker, ahora villana</comentario><fuerza>3.3000000000000003</fuerza></antiheroe><antiheroe><nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Deadpool</nombre><codigo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">AH-0006</codigo><foto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">img/Deadpool.jpg</foto><sexo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">H</sexo><poder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Regeneración</poder><comentario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Antihéroe bocazas y desquiciado</comentario><fuerza>7.700000000000001</fuerza></antiheroe></antiheroes>
+    </consulta4_1>
+    <consulta4_2>
+        <descripcion>Consulta 4_2: Modifica la fuerza de todos incrementándola en un 10%, en archivo</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        xquery version "3.0";
+                        import module namespace file = "http://expath.org/ns/file";
+
+                        declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+                        declare option output:method "xml";
+                        declare option output:indent "yes";
+
+                        let $output-path := "antiheroes.xml"
+                        let $doc := doc("antiheroes.xml")
+                        let $antiheroes := $doc/antiheroes/antiheroe
+
+                        (: Crear una copia del documento original para modificarlo :)
+                        let $modified-doc :=
+                            copy $c := $doc
+                            modify (
+                                for $antiheroe in $c/antiheroes/antiheroe
+                                return replace value of node $antiheroe/fuerza with $antiheroe/fuerza * 1.1
+                            )
+                            return $c
+
+                        return (
+                        file:write($output-path, $modified-doc, map { "encoding": "UTF-8" }),
+                        <result>Documento XML guardado en {$output-path}</result>
+                        )
+        </codigo_xquery>
+        <result>Documento XML guardado en antiheroes.xml</result>
+    </consulta4_2>
+    <consulta5_1>
+        <descripcion>Consulta 5_1: Elimina el antihéroe con menos fuerza, en memoria.</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        xquery version "3.0";
+
+                        let $doc := doc("antiheroes.xml")
+                        let $antiheroes := $doc/antiheroes/antiheroe
+                        let $min_fuerza := min($antiheroes/fuerza)
+
+                        let $modified-doc :=
+                            copy $c := $doc
+                            modify (
+                                for $antiheroe in $c/antiheroes/antiheroe
+                                where $antiheroe/fuerza = $min_fuerza
+                                return delete node $antiheroe
+                            )
+                            return $c
+
+                        return $modified-doc                       
+        </codigo_xquery>
+        <?xml-stylesheet type="text/xsl" href="antiheroes.xsl"?><antiheroes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="antiheroes.xsd">
+            <antiheroe id="AH-0001">
+                <nombre>Dr Strange</nombre>
+                <codigo>AH-0001</codigo>
+                <foto>img/DoctorStrange.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Transformación</poder>
+                <fuerza>7</fuerza>
+                <comentario>Maestro de las artes místicas</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0002">
+                <nombre>Gata Negra</nombre>
+                <codigo>AH-0002</codigo>
+                <foto>img/GataNegra.jpg</foto>
+                <sexo>M</sexo>
+                <poder>Agilidad</poder>
+                <fuerza>5</fuerza>
+                <comentario>Experta en artes marciales y ladrona elegante</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0003">
+                <nombre>La Sombra</nombre>
+                <codigo>AH-0003</codigo>
+                <foto>img/LaSombra.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Invisibilidad</poder>
+                <fuerza>6</fuerza>
+                <comentario>Maestro del sigilo y la infiltración</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0004">
+                <nombre>Ravena</nombre>
+                <codigo>AH-0004</codigo>
+                <foto>img/Ravena.jpg</foto>
+                <sexo>M</sexo>
+                <poder>Volar</poder>
+                <fuerza>6</fuerza>
+                <comentario>Telepática y experta en artes oscuras</comentario>
+            </antiheroe>
+            
+            <antiheroe id="AH-0006">
+                <nombre>Deadpool</nombre>
+                <codigo>AH-0006</codigo>
+                <foto>img/Deadpool.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Regeneración</poder>
+                <fuerza>7</fuerza>
+                <comentario>Antihéroe bocazas y desquiciado</comentario>
+            </antiheroe>
+        </antiheroes>
+    </consulta5_1>
+    <consulta5_2>
+        <descripcion>Consulta 5_2: Elimina el antihéroe con menos fuerza, en archivo</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        xquery version "3.0";
+                        import module namespace file = "http://expath.org/ns/file";
+
+                        declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+                        declare option output:method "xml";
+                        declare option output:indent "yes";
+
+                        (: Cambie la ruta del archivo en la siguiente línea a la ruta de su archivo de salida deseado :)
+                        let $output-path := "antiheroes.xml"
+                        let $doc := doc("antiheroes.xml")
+                        let $antiheroes := $doc/antiheroes/antiheroe
+                        let $min_fuerza := min($antiheroes/fuerza)
+
+                        let $modified-doc :=
+                            copy $c := $doc
+                            modify (
+                                for $antiheroe in $c/antiheroes/antiheroe
+                                where $antiheroe/fuerza = $min_fuerza
+                                return delete node $antiheroe
+                            )
+                            return $c
+
+                        return (
+                        file:write($output-path, $modified-doc, map { "encoding": "UTF-8" }),
+                        <result>Documento XML guardado en {$output-path}</result>
+                        )
+        </codigo_xquery>
+        <result>Documento XML guardado en antiheroes.xml</result>   
+    </consulta5_2>
+    <consulta6>
+        <descripcion>Consulta 6: Mostar con XPATH el nombre del antihéroe con la fuerza más alta</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes/antiheroe
+                        let $max_fuerza := max($antiheroes/fuerza)
+                        return $antiheroes[fuerza = $max_fuerza]/nombre
+        </codigo_xquery>
+        <nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Dr Strange</nombre>
+        <nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Deadpool</nombre>
+    </consulta6>
+    <consulta7>
+        <descripcion>Consulta 7: Mostar con FLWOR el nombre del antihéroe con menor fuerza</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes/antiheroe
+                        let $min_fuerza := min($antiheroes/fuerza)
+                        for $antiheroe in $antiheroes
+                        where $antiheroe/fuerza = $min_fuerza
+                        return $antiheroe/nombre
+        </codigo_xquery>
+        <nombre xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Arlequina</nombre>
+    </consulta7>
+    <consulta8>
+        <descripcion>Consulta 8: Mostrar el nombre, el poder y la fuerza con un 5% menos</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes/antiheroe
+                        for $antiheroe in $antiheroes
+                        return
+                        <result>
+                            <nombre>{ $antiheroe/nombre/text() }</nombre>
+                            <poder>{ $antiheroe/poder/text() }</poder>
+                            <fuerza>{ $antiheroe/fuerza * 0.95 }</fuerza>
+                        </result>
+        </codigo_xquery>
+        <result><nombre>Dr Strange</nombre><poder>Transformación</poder><fuerza>6.6499999999999995</fuerza></result>
+        <result><nombre>Gata Negra</nombre><poder>Agilidad</poder><fuerza>4.75</fuerza></result>
+        <result><nombre>La Sombra</nombre><poder>Invisibilidad</poder><fuerza>5.699999999999999</fuerza></result>
+        <result><nombre>Ravena</nombre><poder>Volar</poder><fuerza>5.699999999999999</fuerza></result>
+        <result><nombre>Arlequina</nombre><poder>Agilidad</poder><fuerza>2.8499999999999996</fuerza></result>
+        <result><nombre>Deadpool</nombre><poder>Regeneración</poder><fuerza>6.6499999999999995</fuerza></result>
+    </consulta8>
+    <consulta9>
+        <descripcion>Consulta 9: Mostrar una lista en HTML con el título, poder y su fuerza.</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        let $antiheroes := doc("antiheroes.xml")/antiheroes/antiheroe
+                        return
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Poder</th>
+                                <th>Fuerza</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {
+                                for $antiheroe in $antiheroes
+                                return
+                                <tr>
+                                    <td>{ $antiheroe/nombre/text() }</td>
+                                    <td>{ $antiheroe/poder/text() }</td>
+                                    <td>{ $antiheroe/fuerza/text() }</td>
+                                </tr>
+                            }
+                            </tbody>
+                        </table>
+        </codigo_xquery>
+        <table><thead><tr><th>Nombre</th><th>Poder</th><th>Fuerza</th></tr></thead><tbody><tr><td>Dr Strange</td><td>Transformación</td><td>7</td></tr><tr><td>Gata Negra</td><td>Agilidad</td><td>5</td></tr><tr><td>La Sombra</td><td>Invisibilidad</td><td>6</td></tr><tr><td>Ravena</td><td>Volar</td><td>6</td></tr><tr><td>Arlequina</td><td>Agilidad</td><td>3</td></tr><tr><td>Deadpool</td><td>Regeneración</td><td>7</td></tr></tbody></table>
+    </consulta9>
+    <consulta10_1>
+        <descripcion>Consulta 10_1: Modifica el poder de un antihéroe, en memoria</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        xquery version "3.0";
+
+                        let $doc := doc("antiheroes.xml")
+                        let $antiheroes := $doc/antiheroes/antiheroe
+                        let $antiheroe_modificar := $antiheroes[nombre = "Arlequina"]
+
+                        let $modified-doc :=
+                            copy $c := $doc
+                            modify (
+                                replace value of node $c/antiheroes/antiheroe[nombre = "Arlequina"]/poder with "Regeneración"
+                            )
+                            return $c
+
+                        return $modified-doc
+        </codigo_xquery>
+        <?xml-stylesheet type="text/xsl" href="antiheroes.xsl"?><antiheroes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="antiheroes.xsd">
+            <antiheroe id="AH-0001">
+                <nombre>Dr Strange</nombre>
+                <codigo>AH-0001</codigo>
+                <foto>img/DoctorStrange.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Transformación</poder>
+                <fuerza>7</fuerza>
+                <comentario>Maestro de las artes místicas</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0002">
+                <nombre>Gata Negra</nombre>
+                <codigo>AH-0002</codigo>
+                <foto>img/GataNegra.jpg</foto>
+                <sexo>M</sexo>
+                <poder>Agilidad</poder>
+                <fuerza>5</fuerza>
+                <comentario>Experta en artes marciales y ladrona elegante</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0003">
+                <nombre>La Sombra</nombre>
+                <codigo>AH-0003</codigo>
+                <foto>img/LaSombra.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Invisibilidad</poder>
+                <fuerza>6</fuerza>
+                <comentario>Maestro del sigilo y la infiltración</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0004">
+                <nombre>Ravena</nombre>
+                <codigo>AH-0004</codigo>
+                <foto>img/Ravena.jpg</foto>
+                <sexo>M</sexo>
+                <poder>Volar</poder>
+                <fuerza>6</fuerza>
+                <comentario>Telepática y experta en artes oscuras</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0005">
+                <nombre>Arlequina</nombre>
+                <codigo>AH-0005</codigo>
+                <foto>img/Arlequina.jpg</foto>
+                <sexo>M</sexo>
+                <poder>Regeneración</poder>
+                <fuerza>3</fuerza>
+                <comentario>Antigua psiquiatra del Joker, ahora villana</comentario>
+            </antiheroe>
+            <antiheroe id="AH-0006">
+                <nombre>Deadpool</nombre>
+                <codigo>AH-0006</codigo>
+                <foto>img/Deadpool.jpg</foto>
+                <sexo>H</sexo>
+                <poder>Regeneración</poder>
+                <fuerza>7</fuerza>
+                <comentario>Antihéroe bocazas y desquiciado</comentario>
+            </antiheroe>
+        </antiheroes>
+    </consulta10_1>
+    <consulta10_2>
+        <descripcion>Consulta 10_2: Modifica el poder de un antihéroe, en archivo</descripcion>
+        <codigo_xquery>El código XQuery es: 
+                        xquery version "3.0";
+                        import module namespace file = "http://expath.org/ns/file";
+
+                        declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+                        declare option output:method "xml";
+                        declare option output:indent "yes";
+                        let $output-path := "antiheroes.xml"
+                        let $doc := doc("antiheroes.xml")
+                        let $antiheroes := $doc/antiheroes/antiheroe
+                        let $antiheroe_modificar := $antiheroes[nombre = "Arlequina"]
+
+                        let $modified-doc :=
+                            copy $c := $doc
+                            modify (
+                                replace value of node $c/antiheroes/antiheroe[nombre = "Arlequina"]/poder with "Regeneración"
+                            )
+                            return $c
+
+                        return (
+                        file:write($output-path, $modified-doc, map { "encoding": "UTF-8" }),
+                        <result>Documento XML guardado en {$output-path}</result>
+                        )
+        </codigo_xquery>
+        <result>Documento XML guardado en antiheroes.xml</result>
+    </consulta10_2>
+</resultados> 
